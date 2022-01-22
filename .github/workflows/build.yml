@@ -1,0 +1,23 @@
+name: Build
+'on':
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+jobs:
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: c92a9b51-e03f-4d89-ad62-508897c15a47
+          SONAR_TOKEN: e62c84adbcfda79e46a9c096fbf892c15140994b
