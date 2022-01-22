@@ -1,0 +1,20 @@
+{
+  "name": "java",
+  "version": "1.0.0",
+  "description": "java",
+  "main": "app.js",
+  "author": "Examly",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.3",
+    "uuid": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=10 <11"
+  }
+}
